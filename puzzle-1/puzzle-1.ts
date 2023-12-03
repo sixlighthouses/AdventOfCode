@@ -12,19 +12,18 @@ fs.readFile(inputFile, 'utf8', (err, data) => {
     return
   }
 
-  const lines = data.split('\n');
+  const lines = data.split('\n')
   lines.map((line) => {
 
     // split the line into array of characters
-    const chars = line.split('');
+    const chars = line.split('')
 
     // get all numbers from the array chars
     const numbers = chars.filter((char) => !isNaN(parseInt(char, 10)));
-    console.log(numbers);
 
     if (numbers.length === 0) {
       // no numbers found in the line
-      return;
+      return
     }
 
     // get first and last number
